@@ -1,0 +1,92 @@
+*, 
+*:before, 
+*:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+html {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	text-align: center;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	padding: 0;
+	margin: 0;
+	li {
+		display: inline-block;
+		margin: 0 20px;
+	}
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+}
+.site-header {
+	height: 30px;
+	width: 100%;
+	background: rgb(238,238,238);
+	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+	background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+	-webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.6);
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,0.6);
+	line-height: 2.5;
+	margin-bottom: 50px;
+	h1 {
+		color: #000;
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+		font-size: 0.8em;
+		font-weight: 400;
+		margin: 0;
+		&:before {
+			content: url('../img/folder-sm.png');
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-right: 7px;
+			position: relative;
+			top: 2px;
+		}
+	}
+}
+.site-folder {
+	position: relative;
+	width: 145px;
+	height: 132px;
+	.folder-icon {
+		display: block;
+		height: 100%;
+		width: 100%;
+		background-image: url('../img/folder-128.png');
+		background-repeat: no-repeat;
+		background-position: center top;
+		border-radius: 5px;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		&:hover {
+			background-color: fade(#000, 10%);
+			+ .folder-name {
+				background-color: #2b5dcd;
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+.folder-name {
+	border-radius: 24px;
+	font-weight: 400;
+	font-size: 0.8em;
+	text-transform: lowercase;
+	display: inline-block;
+	margin-top: 10px;
+	padding: 5px 12px;
+}
